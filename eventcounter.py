@@ -32,7 +32,7 @@ import matplotlib.pyplot as plt
 results = []
 
 # Open blinking.dat file.
-with open('data/blinking.dat') as inputfile:
+with open('data_carlos/baseline.dat') as inputfile:
     for row in csv.reader(inputfile):
         rows = row[0].split(' ')
         results.append(rows[1:])
