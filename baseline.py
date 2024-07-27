@@ -24,7 +24,7 @@ from scipy.sparse.linalg  import spsolve
 
 print('Baseline Removal')
 
-signals = pd.read_csv('data/blinking.dat', delimiter=' ', names = ['timestamp','counter','eeg','attention','meditation','blinking'])
+signals = pd.read_csv('data_carlos/pestaneos.dat', delimiter=' ', names = ['timestamp','counter','eeg','attention','meditation','blinking'])
 data = signals.values
 eeg = data[:,2]
 

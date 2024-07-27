@@ -32,7 +32,7 @@ import matplotlib.pyplot as plt
 results = []
 
 # Open blinking.dat file.
-with open('data_carlos/baseline.dat') as inputfile:
+with open('data_carlos/pestaneos.dat') as inputfile:
     for row in csv.reader(inputfile):
         rows = row[0].split(' ')
         results.append(rows[1:])
@@ -81,9 +81,9 @@ plt.show()
 
 
 #Find the threshold values to determine what is a blinking and what is not
-umbral_superior=int(eeg.mean()+3*eeg.std())
+umbral_superior=int(eeg.mean()+1.5*eeg.std())
 print("Upper Threshold: {}".format(umbral_superior))
-umbral_inferior=int(eeg.mean()-3*eeg.std())
+umbral_inferior=int(eeg.mean()-1.5*eeg.std())
 print("Lower Threshold: {}".format(umbral_inferior))
 plt.figure(figsize=(12,5))
 plt.plot(eeg,color="green")

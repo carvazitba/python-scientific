@@ -15,7 +15,7 @@ print("Check the lag plot.")
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-signals = pd.read_csv('data/blinking.dat', delimiter=' ', usecols=[2], names = ['timestamp','counter','eeg','attention','meditation','blinking'])
+signals = pd.read_csv('data_carlos/baseline.dat', delimiter=' ', usecols=[2], names = ['timestamp','counter','eeg','attention','meditation','blinking'])
 
 from matplotlib import pyplot
 from pandas.plotting import lag_plot

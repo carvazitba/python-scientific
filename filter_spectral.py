@@ -164,7 +164,7 @@ from scipy.fft import rfft, rfftfreq
 
 
 import pandas as pd
-signals = pd.read_csv('data/blinking.dat', delimiter=' ', names = ['timestamp','counter','eeg','attention','meditation','blinking'])
+signals = pd.read_csv('data_carlos/mentalimageryp.dat', delimiter=' ', names = ['timestamp','counter','eeg','attention','meditation','blinking'])
 data = signals.values
 eeg = data[:,2]
 

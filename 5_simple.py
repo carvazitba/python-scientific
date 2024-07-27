@@ -65,15 +65,8 @@ print(eeg)
 plt.plot(eeg,'r', label='EEG')
 plt.xlabel('t');
 plt.ylabel('eeg(t)');
-plt.title(r'EEG Signal')     # r'' representa un raw string que no tiene caracteres especiales
+plt.title(r'EEG Signal - Pestaneos')     # r'' representa un raw string que no tiene caracteres especiales
 plt.ylim([-2000, 2000]);
 plt.xlim([0,len(eeg)])
 plt.savefig('grafico.eps')
 plt.show()
-
-import seaborn as sns
-sns.set(style="darkgrid")
-sns.lineplot(x="timestamp", y="eeg", hue="attention", data=signals)
-import matplotlib.pyplot as plt
-plt.show()
-
